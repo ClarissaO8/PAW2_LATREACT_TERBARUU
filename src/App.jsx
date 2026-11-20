@@ -3,7 +3,7 @@ import Counter from './components/Counter';
 import ThemeSwap from './components/ThemeSwap';
 const App = () => {
   return <div>
-      <h1>hello react</h1>
+      <h1>HELLO REACT</h1>
       <button className="btn btn-neutral">Button Example</button>
       
       <button className="btn bg-white text-black border-[#e5e5e5]">
@@ -13,7 +13,7 @@ const App = () => {
   <Counter/>
   <ThemeSwap/>
     </div>; 
-    
+  
     
 }
 
