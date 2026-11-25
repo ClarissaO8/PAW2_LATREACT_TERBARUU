@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { NavLink } from "react-router";
 
-const about = () => {
+const About = () => {
   return (
-    <div>about</div>
-  )
-}
+    <div>
+      <h1>ABOUT PAGE</h1>
 
-export default about
+      <NavLink to="/" className="btn btn-primary">
+        BACK TO HOME
+      </NavLink>
+    </div>
+  );
+};
+
+export default About;

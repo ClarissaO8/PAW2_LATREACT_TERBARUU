@@ -1,6 +1,8 @@
 import React from 'react'
 import Counter from './components/Counter';
 import ThemeSwap from './components/ThemeSwap';
+import Register from './pages/register/Register';
+
 const App = () => {
   return <div>
       <h1>HELLO REACT</h1>

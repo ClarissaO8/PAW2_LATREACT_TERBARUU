@@ -2,34 +2,45 @@ import { createBrowserRouter } from "react-router";
 import about from "../pages/about/about";
 import home from "../pages/home/home";
 import PublicLayout from "../layouts/PublicLayout";
+import Register from "../pages/register/Register";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        Component: PublicLayout,
-        children: [
-            {
-                index: true,
-                lazy: async() => {
-                    const module = await import("../pages/home/home")
+  {
+    path: "/",
+    Component: PublicLayout,
+    children: [
+      {
+        index: true,
+        lazy: async () => {
+          const module = await import("../pages/home/home");
 
-                    return {
-                        Component: module.default
-                    }
-                }
-            },
-            {
-                path: "/about",
-                lazy: async() => {
-                    const module = await import("../pages/about/about")
+          return {
+            Component: module.default,
+          };
+        },
+      },
+      {
+        path: "/about",
+        lazy: async () => {
+          const module = await import("../pages/about/about");
 
-                    return {
-                        Component: module.default
-                    }
-                }
-            }
-        ]
-    },
-])
+          return {
+            Component: module.default,
+          };
+        },
+      },
+      {
+        path: "/register",
+        lazy: async () => {
+          const module = await import("../pages/register/register");
 
-export default router
+          return {
+            Component: module.default,
+          };
+        },
+      },
+    ],
+  },
+]);
+
+export default router;
